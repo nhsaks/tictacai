@@ -11,27 +11,33 @@
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
   </head>
   <body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <!-- Welcome Screen -->
+
+
+    <!-- Step 1 -->
+    <!-- Welcome Screen start then hidden untill loged in member logout-->
     <div id="welcome-screen" class="container mx-auto max-w-md text-center">
       <div class="bg-white shadow-md rounded-lg overflow-hidden">
         <div class="p-6">
           <h1 class="text-2xl font-bold mb-4">Welcome to TicTac</h1>
-          <p class="text-gray-600 mb-6">Play online games with friends. Register or log in to get started!</p>
+          <p class="text-gray-600 mb-6">Play online games with voice chat</p>
           <button id="start-btn" class="w-full bg-blue-500 text-white rounded-lg py-2 hover:bg-blue-600 transition">
             Get Started
           </button>
         </div>
       </div>
     </div>
+    <!-- devlog - not done -->
 
-    <!-- Member Gate -->
+
+    <!-- Step 2 -->
+    <!-- Member Gate login section -->
     <div id="member-gate" class="container mx-auto max-w-md hidden">
       <div class="bg-white shadow-md rounded-lg overflow-hidden">
         <div class="text-center p-4">
           <h5 class="text-lg font-bold">Member Gate</h5>
         </div>
         <div class="p-6">
-          <!-- Google Login Section -->
+         
           <div class="text-center mb-4">
             <button id="google-login-btn" class="w-full flex items-center justify-center border border-blue-500 text-blue-500 rounded-lg py-2 hover:bg-blue-500 hover:text-white transition">
               <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" class="w-5 h-5 mr-2">
@@ -41,7 +47,7 @@
           <div class="text-center mb-4">
             <span class="text-gray-500">OR</span>
           </div>
-          <!-- Email Login Section -->
+         
           <div id="email-section">
             <h6 class="text-center text-gray-700 font-semibold mb-2">Login with Email</h6>
             <input type="email" id="email" placeholder="Enter your email" class="w-full border border-gray-300 rounded-lg px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -53,17 +59,92 @@
         </div>
       </div>
     </div>
+    <!-- devlog - not done -->
 
+    <!-- Step 3 -->
     <!-- Logged-In User Section -->
-    <div id="user-info" class="container mx-auto max-w-md hidden">
+    <div  class="container mx-auto max-w-md hidden">
       <div class="bg-white shadow-md rounded-lg overflow-hidden">
         <div class="p-6 text-center">
-          <h5 class="text-lg font-bold mb-4">Welcome Back!</h5>
-          <p id="user-email" class="text-gray-700 mb-4"></p>
+          <h5 class="text-lg font-bold mb-4">username</h5>
+          <p id="user-name" class="text-gray-700 mb-4">email</p>
+          <p id="user-email" class="text-gray-700 mb-4">coin</p>
+          <p>logout</p>
           <button id="logout-btn" class="w-full bg-red-500 text-white rounded-lg py-2 hover:bg-red-600 transition">Logout</button>
         </div>
       </div>
     </div>
+    <!-- devlog - not done -->
+
+    <!-- Step 4 -->
+     <!-- Match Making Section -->
+     <div  class="container mx-auto max-w-md hidden">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="p-6 text-center">
+          <h5 class="text-lg font-bold mb-4">10 Coin Game Machmaking </h5>
+          <p id="user-email" class="text-gray-700 mb-4">One Member Create Game</p>
+          <p id="user-email" class="text-gray-700 mb-4">Other Member Join Game</p>
+          
+          <p>Aslo use peerjs voice chat</p>
+          <p>same like many member play game online  one member can play one time one game untill close</p>
+          <button id="logout-btn" class="w-full bg-red-500 text-white rounded-lg py-2 hover:bg-red-600 transition">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- devlog - not done -->
+
+
+        <!-- Step 5 -->
+     <!-- Game Board Section -->
+     <div  class="container mx-auto max-w-md hidden">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="p-6 text-center">
+          <!--  -->
+          <h5 class="text-lg font-bold mb-4">Game Board 10 Coin Battle </h5>
+          <p id="user-email" class="text-gray-700 mb-4">username with player A</p>
+          <p id="user-email" class="text-gray-700 mb-4">username with player B</p>
+          <p>Aslo use peerjs voice chat  </p>
+          <p>minus 10 coin from looser member and add 10 coin  to winner member </p>
+          <p>if any member closed or net disconnect for one minute game closed member loose game</p>
+          <p>if game complete same member can play again if they want again request and accept request then start </p>
+          <button id="logout-btn" class="w-full bg-red-500 text-white rounded-lg py-2 hover:bg-red-600 transition">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- devlog - not done -->
+
+        <!-- Step 6 -->
+    <!-- isAdmin only Section -->
+    <div  class="container mx-auto max-w-md hidden">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="p-6 text-center">
+          <h5 class="text-lg font-bold mb-4">Admin Panel </h5>
+          <p id="user-name" class="text-gray-700 mb-4">member email</p>
+          <p id="user-email" class="text-gray-700 mb-4">coin</p>
+          <p>Add Coin green button</p>
+          <p>Remove Coin red button</p>
+          <button id="logout-btn" class="w-full bg-red-500 text-white rounded-lg py-2 hover:bg-red-600 transition">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- devlog - not done -->
+
+         <!-- Step 7 -->
+    <!-- help and contact Section -->
+    <div  class="container mx-auto max-w-md hidden">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="p-6 text-center">
+          <h5 class="text-lg font-bold mb-4">WhatsApp chat link </h5>
+          <p>wa.me/923087464296</p>
+         
+          <button id="logout-btn" class="w-full bg-red-500 text-white rounded-lg py-2 hover:bg-red-600 transition">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- devlog - not done -->
+
+
+
 
     <script src="game.js"></script>
   </body>
